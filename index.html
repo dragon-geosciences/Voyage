@@ -67,6 +67,9 @@
             right: 0;
             padding: 10px;
             z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         #logo {
@@ -81,8 +84,17 @@
 
 <div id="iframe-container">
     <iframe id="myIframe" src="https://reurl.cc/L4Yxp7" frameborder="0"></iframe>
-    <div id="dragonOverlay">Dragon Geosciences - Voyage - Our Fleet</div>
+    <div id="dragonOverlay">
+        <span>Dragon Geosciences - Voyage - Our Fleet</span>
+        <span id="refresh" style="cursor: pointer;">Refresh ⟳</span>
+    </div>
 </div>
+
+<script>
+    document.getElementById('refresh').addEventListener('click', function() {
+        window.location.href = 'https://dragon-geosciences.github.io/Voyage/';
+    });
+</script>
 
 </body>
 </html>
